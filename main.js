@@ -1,5 +1,6 @@
-$('.benefits').find('div').click(function() {
+$('.panel').on('click', function() {
+	console.log('working?');
 	$this = $(this);
-	$this.removeClass('.show');
-	$this.find("p").addClass('.show');
-})
+	$('.center').empty('p');
+	$this.find('p').appendTo('.center');
+	});

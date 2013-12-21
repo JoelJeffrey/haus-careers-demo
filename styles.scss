@@ -13,6 +13,10 @@ $tan-bg: #f6f0e9;
 * {
 	padding: 0;
 	margin: 0;
+	&::selection {
+		background: #d36E56;
+		color: $white;
+	}
 }
 h1 {
 	font-style: italic;
@@ -128,7 +132,7 @@ header {
 		color: $grey;
 	}
 	.jobs {
-		width: 40%;
+		width: 50%;
 	}
 	li {
 		line-height: 50px;
@@ -140,77 +144,73 @@ header {
 }
 .benefits {
 	height: 550px;
-	.triangle {
-		position: absolute;
-		left: 50%;
-		margin-left: -20px;
-		width: 0;
-		height: 0;
-		border-left: 20px solid transparent;
-		border-right: 20px solid transparent;
-		border-top: 20px solid $yellow;
+	p {
+		display: none;
+		width: 80%;
+		margin: 20px auto;
+		text-align: left;
+		line-height: 30px;
 	}
-	.get-chair, .anarchy {
+	.panel {
+		height: 225px;
+		width: 33.33%;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		float: left;
+	}
+	.top, .bottom {
 		height: 165px;
-		line-height: 165px;
+		width: 100%;
+		h3 {
+			top: 70px;
+		}
 	}
-	.cheese, .work-late, .anarchy, .get-chair {
+	h3 {
+		position: relative;
+
 		font-size: 22px;
 		text-decoration: underline;
 		text-transform: uppercase;
 		color: $white;
 	}
-	.get-chair {
+	.top {
 		background-color: $yellow;
-
-		color: $grey;
+		h3 {
+			color: $grey;
+		}
 	}
-	.cheese, .work-late {
-		height: 225px;
-		width: 33%;
-
-		float: left;
-	}
-	.cheese {
-		position: relative;
-
+	.left {
 		background-color: $orange;
-		span {
-			position: relative;
+		h3 {
 			top: 90px;
 		}
 	}
-	.text {
-		position: relative;
-
-		color: #333;
-		line-height: 30px;
-
-		height: 225px;
-		width: 34%;
+	.center {
 		background-color: $white;
-
-		float: left;
-		p {
+		cursor: default;
+		.triangle {
 			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			padding-top: 30px;
-			width: 80%;
-			margin: 0 auto;
-			font-size: 16px;
-			text-align: left;
-			opacity: 0;
+			left: 50%;
+			margin-left: -20px;
+			width: 0;
+			height: 0;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-top: 20px solid $yellow;
+		}
+		p {
+			display: block;
 		}
 	}
-	.work-late {
+	.right {
 		background-color: $purple;
-
-		line-height: 225px;
+		h3 {
+			top: 90px;
+		}
 	}
-	.anarchy {
+	.bottom {
 		clear: both;
 
 		background-color: $dark-grey;

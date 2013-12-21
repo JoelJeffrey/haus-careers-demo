@@ -1,6 +1,9 @@
 * {
   padding: 0;
   margin: 0; }
+  *::selection {
+    background: #d36E56;
+    color: white; }
 
 h1 {
   font-style: italic;
@@ -94,7 +97,7 @@ header {
     font-size: 60px;
     color: #bfbdbc; }
   .careers .jobs {
-    width: 40%; }
+    width: 50%; }
   .careers li {
     line-height: 50px;
     margin: 0 50px; }
@@ -103,60 +106,58 @@ header {
 
 .benefits {
   height: 550px; }
-  .benefits .triangle {
-    position: absolute;
-    left: 50%;
-    margin-left: -20px;
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #fdfcc7; }
-  .benefits .get-chair, .benefits .anarchy {
+  .benefits p {
+    display: none;
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+    line-height: 30px; }
+  .benefits .panel {
+    height: 225px;
+    width: 33.33%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    float: left; }
+  .benefits .top, .benefits .bottom {
     height: 165px;
-    line-height: 165px; }
-  .benefits .cheese, .benefits .work-late, .benefits .anarchy, .benefits .get-chair {
+    width: 100%; }
+    .benefits .top h3, .benefits .bottom h3 {
+      top: 70px; }
+  .benefits h3 {
+    position: relative;
     font-size: 22px;
     text-decoration: underline;
     text-transform: uppercase;
     color: white; }
-  .benefits .get-chair {
-    background-color: #fdfcc7;
-    color: #bfbdbc; }
-  .benefits .cheese, .benefits .work-late {
-    height: 225px;
-    width: 33%;
-    float: left; }
-  .benefits .cheese {
-    position: relative;
+  .benefits .top {
+    background-color: #fdfcc7; }
+    .benefits .top h3 {
+      color: #bfbdbc; }
+  .benefits .left {
     background-color: #e87f6f; }
-    .benefits .cheese span {
-      position: relative;
+    .benefits .left h3 {
       top: 90px; }
-  .benefits .text {
-    position: relative;
-    color: #333;
-    line-height: 30px;
-    height: 225px;
-    width: 34%;
+  .benefits .center {
     background-color: white;
-    float: left; }
-    .benefits .text p {
+    cursor: default; }
+    .benefits .center .triangle {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      padding-top: 30px;
-      width: 80%;
-      margin: 0 auto;
-      font-size: 16px;
-      text-align: left;
-      opacity: 0; }
-  .benefits .work-late {
-    background-color: #97889c;
-    line-height: 225px; }
-  .benefits .anarchy {
+      left: 50%;
+      margin-left: -20px;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #fdfcc7; }
+    .benefits .center p {
+      display: block; }
+  .benefits .right {
+    background-color: #97889c; }
+    .benefits .right h3 {
+      top: 90px; }
+  .benefits .bottom {
     clear: both;
     background-color: #9d9b9a; }
 
