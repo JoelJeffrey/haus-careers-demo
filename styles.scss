@@ -181,6 +181,8 @@ header {
 		}
 	}
 	.text {
+		position: relative;
+
 		color: #333;
 		line-height: 30px;
 
@@ -190,11 +192,17 @@ header {
 
 		float: left;
 		p {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
 			padding-top: 30px;
 			width: 80%;
 			margin: 0 auto;
 			font-size: 16px;
 			text-align: left;
+			opacity: 0;
 		}
 	}
 	.work-late {

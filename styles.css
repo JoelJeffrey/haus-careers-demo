@@ -134,6 +134,7 @@ header {
       position: relative;
       top: 90px; }
   .benefits .text {
+    position: relative;
     color: #333;
     line-height: 30px;
     height: 225px;
@@ -141,11 +142,17 @@ header {
     background-color: white;
     float: left; }
     .benefits .text p {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
       padding-top: 30px;
       width: 80%;
       margin: 0 auto;
       font-size: 16px;
-      text-align: left; }
+      text-align: left;
+      opacity: 0; }
   .benefits .work-late {
     background-color: #97889c;
     line-height: 225px; }
