@@ -33,7 +33,7 @@ header {
     letter-spacing: -1px; }
 
 .masthead {
-  height: 950px;
+  height: 1000px;
   background: url(images/hotel-bg.jpg) no-repeat;
   background-size: cover; }
   .masthead h1 {
@@ -114,13 +114,14 @@ header {
   .benefits .triangle {
     position: absolute;
     left: 50%;
-    top: 200px;
+    bottom: -20px;
     margin-left: -20px;
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #fdfcc7; }
+    border-top: 20px solid #fdfcc7;
+    z-index: 1000; }
   .benefits p {
     display: none;
     width: 80%;
@@ -132,7 +133,6 @@ header {
     width: 33.33%;
     display: inline-block;
     position: relative;
-    overflow: hidden;
     cursor: pointer;
     float: left; }
   .benefits .top, .benefits .bottom {
@@ -161,7 +161,7 @@ header {
     pointer-events: none; }
     .benefits .center p {
       display: block;
-      -webkit-animation: flipIn 1s ease; }
+      -webkit-animation: flipIn 0.5s ease; }
   .benefits .right {
     background-color: #97889c; }
     .benefits .right h3 {
@@ -195,10 +195,15 @@ header {
 footer {
   text-align: left;
   position: fixed;
-  bottom: 0;
+  bottom: -60px;
+  right: 0;
+  left: 0;
   height: 60px;
-  width: 100%;
-  background-color: #f6f0e9; }
+  background-color: #f6f0e9;
+  z-index: 1000;
+  clear: both;
+  overflow: hidden;
+  -webkit-transition: all 0.2s linear; }
   footer li {
     padding: 0 60px 0 40px;
     display: inline;
@@ -249,7 +254,9 @@ footer {
 
 @-webkit-keyframes flipIn {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-transform: scale(0.1); }
 
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    -webkit-transform: scale(1); } }
